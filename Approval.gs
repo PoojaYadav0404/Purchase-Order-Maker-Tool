@@ -17,7 +17,7 @@ function approved() {
   var RepBody = MailTemp.getRange("E6").getValue();
   var Thread = GmailApp.getInboxThreads(0, 200);
 
-  if (!MasterSheets.includes(ActiveSheet.getName()) && (UserId == "rajatbajaj@bajato.com" || UserId=="ppc@bajato.com" || UserId=="ops@bajato.com" || UserId=="purchase@bajato.com" || UserId=="bajatoanoop@gmail.com") && Vendor != ""  && PoDate != "" && DelTime != "" && PoNo != "" && PreparedBy!="") {
+  if (!MasterSheets.includes(ActiveSheet.getName()) && (UserId == "") && Vendor != ""  && PoDate != "" && DelTime != "" && PoNo != "" && PreparedBy!="") {
 
     var OrderArr = (!PoListSheet.getLastRow() < 1) ? PoListSheet.getRange(2, 1, PoListSheet.getLastRow() - 1, 1).getValues().map(insp => { return insp.toString() }) : [];
     var Row = OrderArr.indexOf(PoNo.toString()) + 2;
@@ -36,8 +36,8 @@ function approved() {
 
     if(Row > 1 && ThreadId.length === 1){
 
-      var FolderId = "1rSZR-tf_CYwTlg-IpN71SeYb0aYDgY11"
-      var MasterFormatId = "1xxa7L2-r1mj5Dzul9hwtLEY_IDK5TIjUuU9Sedniwcw";
+      var FolderId = "1rSZR-"
+      var MasterFormatId = "1xxa7L2-";
       var MainDrive = DriveApp.getFolderById(FolderId);
       try {
         var CustomerFdr = MainDrive.getFoldersByName(Vendor).next();
