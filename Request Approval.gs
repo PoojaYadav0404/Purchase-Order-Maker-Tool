@@ -16,7 +16,7 @@ function requestApproval() {
     var RecordFound = InspData.filter(r => r[0] == PoNo);
 
     if (RecordFound.length === 0) {
-      var PoReportLink = "https://docs.google.com/spreadsheets/d/17r4La9Mjk8EeCUXsFj5v9G4nqFz5Knyesw6S1TLDbLA/edit?gid=" + ActiveSheet.getSheetId() + "#gid=" + ActiveSheet.getSheetId();
+      var PoReportLink = "https://docs.google.com/spreadsheets/d/17r4L/edit?gid=" + ActiveSheet.getSheetId() + "#gid=" + ActiveSheet.getSheetId();
       var url_base = "https://docs.google.com/spreadsheets/d/SS_ID/export?".replace("SS_ID", SS.getId());
       var url_ext = 'export?exportFormat=pdf&format=pdf' //export as pdf/ csv. xls
         // Print either the entire Spreadsheet or the specified sheet if optSheetId is provided
